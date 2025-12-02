@@ -1,13 +1,13 @@
-AJ's Portfolio!
+#AJ's Portfolio!
 
-**Setup:**
+##**<ins>Setup</ins>:**
 
 **Clone**
 
-git clone repo
+```git clone repo```
 
 **Django**
-
+```
 python3 -m venv venv
 source venv/bin/activate
 
@@ -16,12 +16,12 @@ source venv/bin/activate
 cd backend
 
 python3 manage.py runserver
-
+```
 **React**
-
+```
 cd frontend
 npm start
-
+```
 **_DONE!_**
 
 Sectons that will either be links or very small demos of projects
