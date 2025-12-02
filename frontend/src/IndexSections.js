@@ -4,25 +4,25 @@ function Sections({ activeSection, scrollToSection }) {
       {/* Navigation */}
         <div className="section-nav">
         <button
-          className={activeSection === "Title" ? "active" : ""}
+          className={activeSection === "home" ? "active" : ""}
           onClick={() => scrollToSection("Title")}
         >
           Home
         </button>
         <button
-          className={activeSection === "hero" ? "active" : ""}
+          className={activeSection === "home" ? "active" : ""}
           onClick={() => scrollToSection("hero")}
         >
           Hero
         </button>
         <button
-          className={activeSection === "about" ? "active" : ""}
+          className={activeSection === "home" ? "active" : ""}
           onClick={() => scrollToSection("about")}
         >
           About
         </button>
         <button
-          className={activeSection === "contact" ? "active" : ""}
+          className={activeSection === "home" ? "active" : ""}
           onClick={() => scrollToSection("contact")}
         >
           Find Me
@@ -30,7 +30,7 @@ function Sections({ activeSection, scrollToSection }) {
       </div>
 
     {/* Sections */}
-    <section className="section" data-section-id="Title">
+    <section className="section" data-section-id="home">
         <div className="section-content">
             <style>{`
                 .icon-image {
@@ -41,24 +41,24 @@ function Sections({ activeSection, scrollToSection }) {
                 }
             `}</style>
             <img src="Icon.png" alt="Icon" className="icon-image"/>
-            <h1 style={{fontWeight: "bold", fontFamily: "Cement"}}>Welcome!</h1>
+            <h1 style={{fontWeight: "bold"}}>Welcome!</h1>
             </div>
     </section>
-      <section className="section" data-section-id="hero">
+      <section className="section" data-section-id="home">
         <div className="section-content">
           <h1>Projects</h1>
           <p>Links to different projects and info</p>
         </div>
       </section>
 
-      <section className="section" data-section-id="about">
+      <section className="section" data-section-id="home">
         <div className="section-content">
           <h1>About</h1>
           <p>Explain something</p>
         </div>
       </section>
 
-      <section className="section" data-section-id="contact">
+      <section className="section" data-section-id="home">
         <div className="section-content">
           <h1>Contact me Here!</h1>
           <p>Email</p>

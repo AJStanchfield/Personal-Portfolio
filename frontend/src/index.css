@@ -26,19 +26,19 @@ body {
 /* Gradient variations */
 
 body.bg-slide {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #5470fe, #f849b5);
 }
 
 body.bg-grad-1 {
-  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  background: linear-gradient(135deg, #5470fe, #f849b5);
 }
 
 body.bg-grad-2 {
-  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  background: linear-gradient(135deg, #5470fe, #f849b5);
 }
 
 body.bg-grad-3 {
-  background: linear-gradient(135deg, #f6d365, #fda085);
+  background: linear-gradient(135deg, #5470fe, #f849b5);
 }
 
 /* Layout for the app content */
