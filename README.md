@@ -11,7 +11,7 @@
 python3 -m venv venv
 source venv/bin/activate
 
-(Maybe) pip install django djangorestframework django-cors-headers
+pip install django djangorestframework django-cors-headers
 
 cd backend
 
