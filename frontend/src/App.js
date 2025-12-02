@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
+import useScrollGradient from "./hooks/GradientBG";
+import Sections from "./IndexSections";
+
+const gradients = {
+  Title: "bg-slide",
+  hero: "bg-grad-1",
+  about: "bg-grad-2",
+  contact: "bg-grad-3",
+};
 
 function App() {
-  const [msg, setMsg] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:8000/api/hello/")
-      .then((res) => res.json())
-      .then((data) => setMsg(data.message));
-  }, []);
+  const { activeSection, scrollToSection } = useScrollGradient(gradients);
 
   return (
-    <div>
-      <h1>React + Django</h1>
-      <p>{msg}</p>
-    </div>
+      <Sections activeSection={activeSection} scrollToSection={scrollToSection} />
+
+      
   );
 }
 
 export default App;
-
