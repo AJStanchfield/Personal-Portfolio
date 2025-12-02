@@ -2,11 +2,11 @@
 
 ## **Setup:**
 
-**Clone**
+### **Clone Repo**
 
 ```git clone repo```
 
-**Django**
+### **Django**
 ```
 python3 -m venv venv
 source venv/bin/activate
@@ -17,13 +17,14 @@ cd backend
 
 python3 manage.py runserver
 ```
-**React**
+### **React**
 ```
 cd frontend
 npm start
 ```
 **_DONE!_**
 
+## **Other Info**
 Sectons that will either be links or very small demos of projects
 
 currently set to be demos, but would prefer links,
