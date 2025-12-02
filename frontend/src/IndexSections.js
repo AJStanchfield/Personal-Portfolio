@@ -25,7 +25,7 @@ function Sections({ activeSection, scrollToSection }) {
           className={activeSection === "contact" ? "active" : ""}
           onClick={() => scrollToSection("contact")}
         >
-          Contact
+          Find Me
         </button>
       </div>
 
@@ -46,22 +46,25 @@ function Sections({ activeSection, scrollToSection }) {
     </section>
       <section className="section" data-section-id="hero">
         <div className="section-content">
-          <h1>Hero Section</h1>
-          <p>Scroll to watch the background gradient change.</p>
+          <h1>Projects</h1>
+          <p>Links to different projects and info</p>
         </div>
       </section>
 
       <section className="section" data-section-id="about">
         <div className="section-content">
           <h1>About</h1>
-          <p>This section uses the second gradient.</p>
+          <p>Explain something</p>
         </div>
       </section>
 
       <section className="section" data-section-id="contact">
         <div className="section-content">
-          <h1>Contact</h1>
-          <p>Final gradient transitions here.</p>
+          <h1>Contact me Here!</h1>
+          <p>Email</p>
+          <p>Linkedin</p>
+          <p>Github</p>
+          
         </div>
       </section>
     </div>
