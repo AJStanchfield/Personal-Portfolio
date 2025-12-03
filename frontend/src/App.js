@@ -2,7 +2,10 @@ import useScrollGradient from "./hooks/GradientBG";
 import Sections from "./IndexSections";
 
 const gradients = {
-  home: "bg-slide",
+  "title-section": "bg-slide",
+  "hero-section": "bg-slide",
+  "about-section": "bg-slide",
+  "contact-section": "bg-slide",
 };
 
 function App() {

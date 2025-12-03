@@ -4,7 +4,7 @@ export default function useScrollGradient(gradientsBySection) {
   const [activeSection, setActiveSection] = useState(Object.keys(gradientsBySection)[0]);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("[data-section-id]");
+    const sections = document.querySelectorAll("[page-id]");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -41,8 +41,10 @@ export default function useScrollGradient(gradientsBySection) {
   }, [activeSection, gradientsBySection]);
 
   // Return scrollTo function + section state
+  // Scroll should target the element with `page-id` so that
+  // color (which uses `data-section-id`) can be independent.
   const scrollToSection = (id) => {
-    const el = document.querySelector(`[data-section-id="${id}"]`);
+    const el = document.querySelector(`[page-id="${id}"]`);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
