@@ -1,3 +1,12 @@
+import Chip from '@mui/material/Chip';
+
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+
+
+
 function Sections({ activeSection, scrollToSection }) {
     return (
         <div className="app-container">
@@ -70,7 +79,7 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="contact-section" page-id="contact">
         <div className="section-content">
           <h1>Contact me Here!</h1>
-          <p>Email</p>
+          <Chip icon={<EmailIcon />} label="Email" component = "a" href="mailto:ajstanchfield@gmail.com" clickable/>
           <p>Linkedin</p>
           <p>Github</p>
           
