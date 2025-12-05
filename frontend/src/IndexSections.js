@@ -54,7 +54,16 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="about-section" page-id="about">
         <div className="section-content">
           <h1>About</h1>
-          <p>Explain something</p>
+          <p>My name is AJ Stanchfield, I am a student at Montclair State University, majoring in a dual major program of Computer Science and Cybersecurity.
+            I am currently in an internshif as a developer at Implse. Implse is made for food trucks and other delivery services, prioritizing
+            communication with the customers, givng them a simple way to other within their messaganger app. I have participated in development by
+            helping to build an Analytics dashboard to track revenue, order details, and other important metrics for business owners. I also helped by
+            creating a demo for a customer dashboard, where they would be able to track their order in one place, inlcuding important features such as ETA, order status, a cancellation option, reorder button, and access to our AI agent for any questions.
+             </p>
+             <h1>Languages, Frameworks, API's, and Libraries</h1>
+             <p>Languages (In order of most used): Python, JavaScript, HTML, CSS, SQL, and Java. Currently learning Swift</p>
+             <p>Frameworks: Django and React</p>
+             <p>API's and Libraries: MUI, Chart.js, RestAPI, Zustand</p>
         </div>
       </section>
 
