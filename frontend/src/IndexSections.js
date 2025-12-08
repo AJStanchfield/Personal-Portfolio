@@ -1,4 +1,25 @@
+import Chip from '@mui/material/Chip';
+import { styled } from '@mui/material/styles';
+
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+
+
+
 function Sections({ activeSection, scrollToSection }) {
+  const contactButtonColors = styled(Chip)(({ theme }) => ({
+  backgroundColor: '#4CAF50', // Custom green background
+  color: 'white',
+  '&:hover': {
+    backgroundColor: '#388E3C', // Darker green on hover
+  },
+  // You can add more styles here, like border, padding, etc.
+}));
+
+
+
     return (
         <div className="app-container">
       {/* Navigation */}
@@ -70,9 +91,13 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="contact-section" page-id="contact">
         <div className="section-content">
           <h1>Contact me Here!</h1>
-          <p>Email</p>
-          <p>Linkedin</p>
-          <p>Github</p>
+          <Chip sx={{backgroundColor:"#d850c3", color:"white"}} icon={<EmailIcon color="white" />} label="Email" component = "a" href="mailto:ajstanchfield@gmail.com" clickable target="_blank"/> 
+          <br/>
+          <br/>
+          <Chip sx={{backgroundColor:"#0A66C2", color:"white", marginLeft:"10px"}} icon={<LinkedInIcon color="white" />} label="LinkedIn" component = "a" href="https://www.linkedin.com/in/allan-stanchfield-475866316/" clickable target="_blank"/>
+          <br/>
+          <br/>
+          <Chip sx={{backgroundColor:"#171515", color:"white", marginLeft:"10px"}} icon={<GitHubIcon color="white" />} label="GitHub" component = "a" href="https://github.com/AJStanchfield" clickable target="_blank"/>
           
         </div>
       </section>
