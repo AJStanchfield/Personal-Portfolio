@@ -75,11 +75,13 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="about-section" page-id="about">
         <div className="section-content">
           <h1>About</h1>
-          <p>My name is AJ Stanchfield, I am a student at Montclair State University, majoring in a dual major program of Computer Science and Cybersecurity.
-            I am currently in an internshif as a developer at Implse. Implse is made for food trucks and other delivery services, prioritizing
-            communication with the customers, givng them a simple way to other within their messaganger app. I have participated in development by
-            helping to build an Analytics dashboard to track revenue, order details, and other important metrics for business owners. I also helped by
-            creating a demo for a customer dashboard, where they would be able to track their order in one place, inlcuding important features such as ETA, order status, a cancellation option, reorder button, and access to our AI agent for any questions.
+          <p>My name is AJ Stanchfield, and I am a student at Montclair State University, pursuing a dual major in Computer Science and Cybersecurity.
+             I am currently working as a developer intern at Implse, a platform designed for food trucks and delivery services that focuses on simplifying 
+             communication with customers by allowing them to place and manage orders directly through their messaging apps.
+            During my internship, I have contributed to the development of an analytics dashboard that tracks revenue, order 
+            details, and other key business metrics. I also created a customer dashboard demo, which lets users track their orders 
+            in one place, including features such as real-time ETA, order status, cancellation options, a reorder button, and access to 
+            our AI agent for any questions.
              </p>
              <h1>Languages, Frameworks, API's, and Libraries</h1>
              <p>Languages (In order of most used): Python, JavaScript, HTML, CSS, SQL, and Java. Currently learning Swift</p>
