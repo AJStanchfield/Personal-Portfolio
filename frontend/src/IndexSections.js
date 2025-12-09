@@ -2,6 +2,7 @@ import Chip from '@mui/material/Chip';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 
+import { Link } from 'react-router-dom';
 
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -71,6 +72,9 @@ function Sections({ activeSection, scrollToSection }) {
         <div className="section-content">
           <h1>Projects</h1>
           <p>Links to different projects and info</p>
+          <Link to="/projects">
+            <button className="project-button">Go to Projects Page</button>
+          </Link>
         </div>
       </section>
 
