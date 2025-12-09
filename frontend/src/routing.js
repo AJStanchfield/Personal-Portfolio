@@ -5,14 +5,13 @@ import HomePage from './App.js';
 import Analytics from './pages/analytics.js';
 import Sections from './IndexSections';
 
-function App() {
+function Routing() {
   return (
-    <Router>
-        <Sections />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/AnalyticsChart" element={<Analytics />} />
+        <Route path="/analyticschart" element={<Analytics />} />
       </Routes>
-    </Router>
   );
 }
+
+export default Routing;

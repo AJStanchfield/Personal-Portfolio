@@ -72,7 +72,7 @@ function Sections({ activeSection, scrollToSection }) {
         <div className="section-content">
           <h1>Projects</h1>
           <p>Click on a Project to be directed to a demo</p>
-          <Link to="/AnalyticsChart">
+          <Link to="/analyticschart">
             <Stack direction="row"><Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable /></Stack>
           </Link>
         </div>
@@ -99,7 +99,7 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="contact-section" page-id="contact">
         <div className="section-content">
           <h1>Contact me Here!</h1>
-          <Stack spacing={2} direction="row">
+          <Stack spacing={2} direction="row" align="center">
           <Chip sx={{backgroundColor:"#d850c3", color:"white"}} icon={<EmailIcon color="white" />} label="Email" component = "a" href="mailto:ajstanchfield@gmail.com" clickable target="_blank"/> 
 
           <Chip sx={{backgroundColor:"#0A66C2", color:"white", marginLeft:"10px"}} icon={<LinkedInIcon color="white" />} label="LinkedIn" component = "a" href="https://www.linkedin.com/in/allan-stanchfield-475866316/" clickable target="_blank"/>
