@@ -1,5 +1,7 @@
 import Chip from '@mui/material/Chip';
 import { styled } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+
 
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -93,14 +95,13 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="contact-section" page-id="contact">
         <div className="section-content">
           <h1>Contact me Here!</h1>
+          <Stack spacing={2} direction="row">
           <Chip sx={{backgroundColor:"#d850c3", color:"white"}} icon={<EmailIcon color="white" />} label="Email" component = "a" href="mailto:ajstanchfield@gmail.com" clickable target="_blank"/> 
-          <br/>
-          <br/>
+
           <Chip sx={{backgroundColor:"#0A66C2", color:"white", marginLeft:"10px"}} icon={<LinkedInIcon color="white" />} label="LinkedIn" component = "a" href="https://www.linkedin.com/in/allan-stanchfield-475866316/" clickable target="_blank"/>
-          <br/>
-          <br/>
+
           <Chip sx={{backgroundColor:"#171515", color:"white", marginLeft:"10px"}} icon={<GitHubIcon color="white" />} label="GitHub" component = "a" href="https://github.com/AJStanchfield" clickable target="_blank"/>
-          
+          </Stack>
         </div>
       </section>
     </div>
