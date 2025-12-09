@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './App.js';
-import ProjectsPage from './pages/ProjectsPage';
+import Analytics from './pages/analytics.js';
 import Sections from './IndexSections';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Sections />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/AnalyticsChart" element={<Analytics />} />
       </Routes>
     </Router>
   );
