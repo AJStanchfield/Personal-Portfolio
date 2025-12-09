@@ -71,7 +71,7 @@ function Sections({ activeSection, scrollToSection }) {
   <section className="section" data-section-id="hero-section" page-id="hero">
         <div className="section-content">
           <h1>Projects</h1>
-          <p>Links to different projects and info</p>
+          <p>Click on a Project to be directed to a demo</p>
           <Link to="/AnalyticsChart">
             <Stack direction="row"><Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable /></Stack>
           </Link>
