@@ -13,8 +13,6 @@ function App() {
 
   return (
       <Sections activeSection={activeSection} scrollToSection={scrollToSection} />
-
-      
   );
 }
 
