@@ -73,7 +73,10 @@ function Sections({ activeSection, scrollToSection }) {
           <h1>Projects</h1>
           <p>Click on a Project to be directed to a demo</p>
           <Link to="/analyticschart">
-            <Stack direction="row"><Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable /></Stack>
+            <Stack direction="row" spacing={2} align="center">
+              <Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable />
+              <Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable />
+            </Stack>
           </Link>
         </div>
       </section>
