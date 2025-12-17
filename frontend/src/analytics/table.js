@@ -28,12 +28,12 @@ const formatPercent = (num) => {
     }
 
     const getTableHead = (headerName) => (
-        <TableHead sx={{ 'backgroundColor': '#ff249c' }}>
+        <TableHead sx={{ 'backgroundColor': '#d850c3' }}>
           <TableRow>
             <TableCell>
                 <span
                     style={{
-                        color: "#ff249c",
+                        color: "#d850c3",
                         background: "white",
                         borderRadius: "3px",
                         display: "inline-block",
@@ -44,10 +44,10 @@ const formatPercent = (num) => {
                     {headerName}
                 </span>
             </TableCell>
-            <TableCell align="center">Current Period</TableCell>
-            <TableCell align="center">Prior Period</TableCell>
-            <TableCell align="center">Variance</TableCell>
-            <TableCell align="right">Chart</TableCell>
+            <TableCell align="center" style={{ color: "white" }}>Current Period</TableCell>
+            <TableCell align="center" style={{ color: "white" }}>Prior Period</TableCell>
+            <TableCell align="center" style={{ color: "white" }}>Variance</TableCell>
+            <TableCell align="right" style={{ color: "white" }}>Chart</TableCell>
           </TableRow>
         </TableHead>
     )
@@ -57,13 +57,18 @@ const formatPercent = (num) => {
             <div style={{ marginBottom: "75px" }}>
                 <div style={{ display: "flex", float: "left" }}>
                 </div>
-
+                <h1 style={{
+                        align: "center",
+                        color: "#d850c3",
+                        background: "white",
+                        borderRadius: "3px",
+                        display: "center",
+                        minWidth: "300px",
+                        textAlign: "center"}}>Analytics Dashboard</h1>
 
 
             </div>
-            <>
-                    <div className="divider-line"></div>
-
+                <>
                     <TableContainer className="analytics-table four-row mt-3 Financial" component={Paper}>
                         <Table sx={{ minWidth: 650 }}>
                             {getTableHead("Financials")}
