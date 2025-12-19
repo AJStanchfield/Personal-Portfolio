@@ -5,12 +5,15 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Routing from './routing';
+import AppRoot from './AppRoot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Routing />
+      <AppRoot>
+        <Routing />
+      </AppRoot>
     </Router>
   </React.StrictMode>
 );
