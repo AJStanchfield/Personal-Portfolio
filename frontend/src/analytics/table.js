@@ -68,69 +68,32 @@ const formatPercent = (num) => {
                 <Table sx={{ minWidth: 950 }}>
                         {getTableHead("Financials")}
                         <TableBody>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Total Sales
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Total Sales" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Route Sales
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Route Sales" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Event Sales
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Event Sales" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Average Order Value
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Average Order Value" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Refunds
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Refunds" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Discounts
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Discounts" /></TableCell>
-                            </TableRow>
-                            <TableRow hover={true}>
-                                <TableCell>
-                                    Tips
-                                </TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="center"></TableCell>
-                                <TableCell align="right"><ChartButton DataName="Tips" /></TableCell>
-                            </TableRow>
+                            {
+                                // Define the rows and map over them so we can create variables
+                                [
+                                    "Total Sales",
+                                    "Route Sales",
+                                    "Event Sales",
+                                    "Average Order Value",
+                                    "Refunds",
+                                    "Discounts",
+                                    "Tips",
+                                ].map((label) => {
+                                    // Generate values once per render so they can be reused
+                                    const current = Math.random() * (1000 - 50) + 50;
+                                    const prior = Math.random() * (1000 - 50) + 50;
+
+                                    return (
+                                        <TableRow key={label} hover={true}>
+                                            <TableCell>{label}</TableCell>
+                                            <TableCell align="center"><FormattedCurrency amount={current} /></TableCell>
+                                            <TableCell align="center"><FormattedCurrency amount={prior} /></TableCell>
+                                            <TableCell align="center"><Variance current={current} prior={prior} /></TableCell>
+                                            <TableCell align="right"><ChartButton DataName={label} /></TableCell>
+                                        </TableRow>
+                                    );
+                                })
+                            }
                         </TableBody>
                     </Table>
                 </TableContainer>

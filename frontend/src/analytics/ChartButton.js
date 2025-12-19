@@ -22,7 +22,8 @@ import ChartPDFButton from "./ChartPDFButton";
 
 const ChartButton = ({DataName}) => {
 
-const chartLoading = () => false;
+// loading flag (was a function which evaluated truthy and disabled the button)
+const chartLoading = false;
 
 const [open, setOpen] = useState(false)
 const componentRef = useRef(null)
