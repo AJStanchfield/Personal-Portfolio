@@ -56,11 +56,16 @@ const formatPercent = (num) => {
         <>
         <div className="section-content" style={{ width: '100%', maxWidth: 1100, margin: '0 auto', padding: '20px' }}>
             <h1 style={{ textAlign: 'center', margin: '0 0 16px 0' }}>Analytics Dashboard</h1>
+            <p style={{ textAlign: 'center' }}>Numbers are Generated from a random value. In the button on the right side, you can see what would be an active chart if it were connected to the same values as the random data.</p>
+            
+            
+            
+            
             <TableContainer
                 className="analytics-table four-row mt-3 Financial"
                 component={Paper}
                 style={{ width: '100%' }}>
-                <Table sx={{ minWidth: 650 }}>
+                <Table sx={{ minWidth: 950 }}>
                         {getTableHead("Financials")}
                         <TableBody>
                             <TableRow hover={true}>
