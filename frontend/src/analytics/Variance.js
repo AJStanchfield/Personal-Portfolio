@@ -1,4 +1,5 @@
 import { memo, useCallback } from "react";
+import "./analytics.css";
 
 const Variance = ({ current, prior }) => {
 

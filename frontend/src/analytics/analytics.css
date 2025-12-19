@@ -1,0 +1,22 @@
+/* Styles moved from analytics.html so components can import them */
+.change {
+		padding: 6px 9px 4px 9px;
+		border-radius: 5px;
+		display: inline-block;
+		margin: -6px 0px;
+}
+
+.positive-change {
+		background: #00DFB5;
+		color: black;
+}
+
+.negative-change {
+		background: #dc3545;
+		color: white;
+}
+
+.neutral-change {
+		background: #ddd;
+		color: black;
+}
