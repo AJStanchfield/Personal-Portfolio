@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 
 export default function useScrollGradient(gradientsBySection) {
-  const [activeSection, setActiveSection] = useState(Object.keys(gradientsBySection)[0]);
+  const defaultKey = Object.keys(gradientsBySection)[0];
+  const [activeSection, setActiveSection] = useState(defaultKey);
 
   useEffect(() => {
     const sections = document.querySelectorAll("[page-id]");
+
+    if (!sections || sections.length === 0) {
+      // If no sections are present yet, ensure we have a sensible default
+      setActiveSection((prev) => prev || defaultKey);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,7 +29,7 @@ export default function useScrollGradient(gradientsBySection) {
 
         if (mostVisibleEntry) {
           const id = mostVisibleEntry.target.getAttribute("data-section-id");
-          setActiveSection(id);
+          if (id) setActiveSection(id);
         }
       },
       { threshold: [0.3, 0.6] }
@@ -35,9 +42,15 @@ export default function useScrollGradient(gradientsBySection) {
   // Apply gradient
   useEffect(() => {
     const body = document.body;
-    const allClasses = Object.values(gradientsBySection);
-    allClasses.forEach((cls) => body.classList.remove(cls));
-    body.classList.add(gradientsBySection[activeSection]);
+    const allClasses = Object.values(gradientsBySection || {});
+    allClasses.forEach((cls) => {
+      if (cls) body.classList.remove(cls);
+    });
+
+    // Determine the class to add: prefer the current activeSection mapping,
+    // fall back to the first available gradient class.
+    const classToAdd = (gradientsBySection && gradientsBySection[activeSection]) || allClasses[0];
+    if (classToAdd) body.classList.add(classToAdd);
   }, [activeSection, gradientsBySection]);
 
   // Return scrollTo function + section state
