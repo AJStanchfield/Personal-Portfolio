@@ -10,6 +10,62 @@ import {
 export const Vis_Chart = ({chartType}) => {
 
 
+let January;
+let Febuary;
+let March;
+let April;
+let May;
+let June;
+let July;
+let August;
+let September;
+let October;
+let November;
+let December;
+
+let PJanuary;
+let PFebuary;
+let PMarch;
+let PApril;
+let PMay;
+let PJune;
+let PJuly;
+let PAugust;
+let PSeptember;
+let POctober;
+let PNovember;
+let PDecember;
+
+
+const currChartData = [
+  January = Math.random() * 100,
+  Febuary = Math.random() * 100,
+  March = Math.random() * 100,
+  April = Math.random() * 100,
+  May = Math.random() * 100,
+  June = Math.random() * 100,
+  July = Math.random() * 100,
+  August = Math.random() * 100,
+  September = Math.random() * 100,
+  October = Math.random() * 100,
+  November = Math.random() * 100,
+  December = Math.random() * 100,
+];
+
+const priorChartData = [
+  PJanuary = Math.random() * 100,
+  PFebuary = Math.random() * 100,
+  PMarch = Math.random() * 100,
+  PApril = Math.random() * 100,
+  PMay = Math.random() * 100,
+  PJune = Math.random() * 100,
+  PJuly = Math.random() * 100,
+  PAugust = Math.random() * 100,
+  PSeptember = Math.random() * 100,
+  POctober = Math.random() * 100,
+  PNovember = Math.random() * 100,
+  PDecember = Math.random() * 100,
+];
 
 
 useEffect(() => {
@@ -35,16 +91,14 @@ useEffect(() => {
       {
       label: chartType,
       tension: 0.1,
-      borderColor: "#ff249C",
-      data: "50, 60, 70, 18, 90, 100, 110, 120, 130, 140, 150, 160"
-      ,
+      borderColor: "#d850c3",
+      data: currChartData,
       },
       {
       label: `Prior ${chartType}`,
       tension: 0.1,
-      borderColor: "#00018d",
-      data: "20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130"
-      ,
+      borderColor: "#5470fe",
+      data: priorChartData,
       },
     ],
     }}
