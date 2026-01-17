@@ -33,6 +33,8 @@ Good Idea:
 
 Section gives base idea of project with title and photo, and then a link to the actual demo
 
+maybe add leetcode acc
+
 Demos so far:
 
   Ana table, make it look nothing like ST
