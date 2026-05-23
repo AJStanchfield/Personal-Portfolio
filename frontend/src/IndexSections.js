@@ -34,16 +34,16 @@ function Sections({ activeSection, scrollToSection }) {
           Home
         </button>
         <button
-          className={activeSection === "hero-section" ? "active" : ""}
-          onClick={() => scrollToSection("hero")}
-        >
-          Projects
-        </button>
-        <button
           className={activeSection === "about-section" ? "active" : ""}
           onClick={() => scrollToSection("about")}
         >
           About
+        </button>
+        <button
+          className={activeSection === "hero-section" ? "active" : ""}
+          onClick={() => scrollToSection("hero")}
+        >
+          Projects
         </button>
         <button
           className={activeSection === "contact-section" ? "active" : ""}
@@ -54,7 +54,7 @@ function Sections({ activeSection, scrollToSection }) {
       </div>
 
     {/* Sections */}
-  <section className="section" data-section-id="title-section" page-id="Title">
+      <section className="section" data-section-id="title-section" page-id="Title">
         <div className="section-content">
             <style>{`
                 .icon-image {
@@ -68,6 +68,23 @@ function Sections({ activeSection, scrollToSection }) {
             <h1 style={{fontWeight: "bold"}}>Welcome!</h1>
             </div>
     </section>
+
+    <section className="section" data-section-id="about-section" page-id="about">
+        <div className="section-content">
+          <h1>About</h1>
+          <p>My name is AJ Stanchfield, and I am a student at Montclair State University, pursuing a dual major in Computer Science and Cybersecurity.
+             I am currently working as a developer intern at Implse, a platform designed for food trucks and delivery services that focuses on simplifying 
+             communication with customers by allowing them to place and manage orders directly through their messaging apps.
+            During my internship, I have contributed to the development of an analytics dashboard that tracks revenue, order 
+            details, and other key business metrics. I also have created a feature that will alter the Primary, Secondary, and Accent colors of our webapp.
+             </p>
+             <h1>Languages, Frameworks, API's, and Libraries</h1>
+             <p>Languages (In order of most used): Python, Java, JavaScript, HTML, CSS, SQL, and Swift</p>
+             <p>Frameworks: Django and React</p>
+             <p>API's and Libraries: MUI, Chart.js, RestAPI, Zustand</p>
+        </div>
+      </section>
+
   <section className="section" data-section-id="hero-section" page-id="hero">
         <div className="section-content">
           <h1>Projects</h1>
@@ -77,31 +94,12 @@ function Sections({ activeSection, scrollToSection }) {
               <Link to="/analyticschart">
               <Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="Analytics Dashboard Demo" clickable />
               </Link>
-              <Link to="/eoyreview">
-              <Chip sx={{backgroundColor:"#5470fe", color:"white"}} label="End of Year Review" clickable />
-              </Link>
             </Stack>
           
         </div>
       </section>
 
-  <section className="section" data-section-id="about-section" page-id="about">
-        <div className="section-content">
-          <h1>About</h1>
-          <p>My name is AJ Stanchfield, and I am a student at Montclair State University, pursuing a dual major in Computer Science and Cybersecurity.
-             I am currently working as a developer intern at Implse, a platform designed for food trucks and delivery services that focuses on simplifying 
-             communication with customers by allowing them to place and manage orders directly through their messaging apps.
-            During my internship, I have contributed to the development of an analytics dashboard that tracks revenue, order 
-            details, and other key business metrics. I also created a customer dashboard demo, which lets users track their orders 
-            in one place, including features such as real-time ETA, order status, cancellation options, a reorder button, and access to 
-            our AI agent for any questions.
-             </p>
-             <h1>Languages, Frameworks, API's, and Libraries</h1>
-             <p>Languages (In order of most used): Python, JavaScript, HTML, CSS, SQL, and Java. Currently learning Swift</p>
-             <p>Frameworks: Django and React</p>
-             <p>API's and Libraries: MUI, Chart.js, RestAPI, Zustand</p>
-        </div>
-      </section>
+  
 
   <section className="section" data-section-id="contact-section" page-id="contact">
         <div className="section-content">

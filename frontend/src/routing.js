@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import HomePage from './App.js';
 import Analytics from './pages/analytics.js';
-import eoyReview from './pages/eoyreview.js';
 
 
 function Routing() {
@@ -13,7 +12,6 @@ function Routing() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/analyticschart" element={<Analytics />} />
-        <Route path="/eoyreview" element={<eoyReview/>} />
       </Routes>
   );
 }
